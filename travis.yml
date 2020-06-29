@@ -2,7 +2,7 @@
 language: python
 #latest python
 python:
-  -  "3.8"
+  -"3.8"
 services:
   -docker
 before_script: pip install dockter-compose

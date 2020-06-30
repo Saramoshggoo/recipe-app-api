@@ -1,10 +1,11 @@
-#what langouage 
 language: python
-#latest python
 python:
-  -"3.8"
+  - "3.8"
+
 services:
-  -docker
-before_script: pip install dockter-compose
+  - docker
+
+before_script: pip install docker-compose
+
 script:
-  - docker-compose run app sh -c "python manage.py test && flake8"
+  - docker-compose run --rm app sh -c "python manage.py test && flake8"
